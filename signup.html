@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Same cursive font as sign-in page -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    .container {
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 40px;
+      max-width: 1000px;
+      margin: 10px auto;
+      padding: 20px;
+      background: var(--paper-base, #fdfaf6);
+      border: 2px solid #a67c52;
+      border-radius: 15px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    }
+    .form-container {
+      flex: 1;
+      display: flex;
+      background: #fffaf6;
+      border-radius: 12px;
+      padding: 8px;
+      box-sizing: border-box;
+    }
+    .side-image {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .side-image img {
+        align-items: stretch;
+      max-width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Responsive layout for smaller screens */
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+      }
+      .side-image {
+        margin-top: 20px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- Form Section -->
+    <div class="form-container">
+      <h2 class="title" style="font-family: cursive;">Create Account</h2>
+
+      <form class="form">
+        <div class="input-group">
+          <label for="username" style="font-family: cursive;">Username</label>
+          <input type="text" id="username" placeholder="Enter username" required>
+        </div>
+
+        <div class="input-group">
+          <label for="email" style="font-family: cursive;">Email</label>
+          <input type="email" id="email" placeholder="Enter email" required>
+        </div>
+
+        <div class="input-group">
+          <label for="password" style="font-family: cursive;">Password</label>
+          <input type="password" id="password" placeholder="Enter password" required>
+        </div>
+
+        <div class="input-group">
+          <label for="confirm-password" style="font-family: cursive;">Confirm Password</label>
+          <input type="password" id="confirm-password" placeholder="Re-enter password" required>
+        </div>
+
+        <!-- Matching sign-in button appearance -->
+        <button type="submit" class="sign" style="font-family: cursive;">Sign Up</button>
+      </form>
+
+      <div class="social-message">
+        <div class="line"></div>
+        <p class="message" style="font-family: cursive;">Or sign up with</p>
+        <div class="line"></div>
+      </div>
+
+      <div class="social-icons">
+        <div class="icon"><i class="fab fa-google"></i></div>
+        <div class="icon"><i class="fab fa-facebook-f"></i></div>
+        <div class="icon"><i class="fab fa-twitter"></i></div>
+      </div>
+
+      <p class="signup" style="font-family: cursive;">
+        Already have an account? <a href="cap.html">Sign In</a>
+      </p>
+    </div>
+
+    <!-- Image Section -->
+    <div class="side-image">
+      <img src="https://videos.openai.com/vg-assets/assets%2Ftask_01k35qfjj4em6byja4jn5dtxng%2F1755760324_img_0.webp?st=2025-08-21T05%3A37%3A01Z&se=2025-08-27T06%3A37%3A01Z&sks=b&skt=2025-08-21T05%3A37%3A01Z&ske=2025-08-27T06%3A37%3A01Z&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skoid=3d249c53-07fa-4ba4-9b65-0bf8eb4ea46a&skv=2019-02-02&sv=2018-11-09&sr=b&sp=r&spr=https%2Chttp&sig=XVRH5yfGZNcYGDxripwRUTA%2B5%2FQ7azaBoVdE%2BYbqFEg%3D&az=oaivgprodscus" alt="Journaling Illustration">
+    </div>
+  </div>
+</body>
+</html>
