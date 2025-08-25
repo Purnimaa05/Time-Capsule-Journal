@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Time Capsule Journal</title>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Sacramento&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Dancing Script', cursive;
+      background: url('https://www.transparenttextures.com/patterns/aged-paper.png');
+      background-color: #f9f5e9;
+      color: #3e2f1c;
+      min-height: 100vh;
+    }
+
+    /* Navbar */
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #4b2e83;
+      color: #fff;
+      padding: 12px 20px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+    }
+
+    .menu-btn {
+      font-size: 1.8rem;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      margin-right: 10px;
+      transition: transform 0.3s ease;
+    }
+
+    .menu-btn.rotate {
+      transform: rotate(180deg);
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-family: 'Sacramento', cursive;
+    }
+
+    .nav-right a {
+      margin-left: 15px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -250px;
+      width: 250px;
+      height: 100%;
+      background: #2c1f47;
+      display: flex;
+      flex-direction: column;
+      padding-top: 60px;
+      transition: left 0.3s ease;
+      z-index: 999;
+    }
+
+    .sidebar.active {
+      left: 0;
+    }
+
+    .sidebar a {
+      padding: 15px 20px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: #3d2d63;
+    }
+
+    .logout {
+      margin-top: auto;
+      padding: 15px 20px;
+      background: #3d2d63;
+    }
+
+    .logout a {
+      color: #ff6b6b;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* Content */
+    .content {
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      font-family: 'Sacramento', cursive;
+      margin-bottom: 15px;
+    }
+
+    p {
+      font-size: 1.3rem;
+      max-width: 800px;
+      margin: auto;
+      line-height: 1.6;
+    }
+
+    .quote {
+      display: block;
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-style: italic;
+      color: #444;
+    }
+
+    /* Button */
+    .btn {
+      margin-top: 20px;
+      padding: 10px 25px;
+      background: #a11d1d;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background: #891717;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-left">
+      <button id="menuBtn" class="menu-btn">⏳</button>
+      <h1 class="logo">Time Capsule Journal</h1>
+    </div>
+    <div class="nav-right">
+      <a href="#">Login</a>
+      <a href="#">Signup</a>
+    </div>
+  </nav>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <a href="#">🏠 Home</a>
+    <a href="#">📖 My Entries</a>
+    <a href="#">🕰️ Timed Journals</a>
+    <a href="#">🔒 Locked Journals</a>
+    <div class="logout">
+      <a href="#">🚪 Log Out</a>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <main class="content">
+    <h2>📖 Welcome to Your Time Capsule</h2>
+    <p>
+      Preserve your moments, explore your past entries, and unlock memories whenever you choose.  
+      A safe place for your heartfelt notes, future letters, and timeless secrets.
+      <br>
+      <span class="quote">“Every day is a page in your story — make it worth remembering.”</span>
+    </p>
+    <button class="btn">➕ New Entry</button>
+  </main>
+
+  <!-- Script -->
+  <script>
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("active");
+      menuBtn.classList.toggle("rotate");
+    });
+  </script>
+</body>
+</html>
+
