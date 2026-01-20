@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Time Capsule Journal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>Today, I feel <span id="moodText">grateful</span></h1>
+
+    <select id="moodSelect">
+      <option value="grateful">Grateful</option>
+      <option value="happy">Happy</option>
+      <option value="calm">Calm</option>
+      <option value="sad">Sad</option>
+      <option value="excited">Excited</option>
+    </select>
+
+    <textarea id="journalText" placeholder="Write your thoughts here..."></textarea>
+
+    <label>Unlock Date</label>
+    <input type="date" id="unlockDate">
+
+    <button id="saveBtn">Save & Lock 🔒</button>
+
+    <p id="status"></p>
+
+    <hr>
+
+    <button id="openBtn">Open My Time Capsule</button>
+    <p id="output"></p>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
